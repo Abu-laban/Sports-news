@@ -4,16 +4,28 @@ var username = prompt ('Please enter your name');
 
 alert('Welcome ' + username);
 
-console.log(username)
+console.log(username);
 
-var league = prompt('Please select your league(Serie A , Premier League , LaLiga , Bundesliga)')
+var league = prompt('Please select your league(Serie A , Premier League , LaLiga , Bundesliga)');
 
+while (league !== 'Serie A' && league !== 'Premier League' && league !== 'LaLiga' && league !== 'Bundesliga') {
+
+  alert('You are enter a wrong league');
+  league = prompt('Please select your league(Serie A , Premier League , LaLiga , Bundesliga)');
+
+}
 if(league =='Serie A')
 {
   var image01 = '<img src="img/SerieA.png" alt= "Serie A"/>';
   
   document.write(image01);
   var team1 = prompt('Please select your champions(Juventus F.C. , Inter Milan , A.C. Milan)')
+
+  while (team1 !== 'Juventus F.C.' && team1 !== 'Inter Milan' && team1 !== 'A.C. Milan') {
+
+  alert('You are enter a wrong champions');
+  team1 = prompt('Please select your champions(Juventus F.C. , Inter Milan , A.C. Milan)')
+  }
   if(team1 =='Juventus F.C.')
 {
   var image1 = '<img src="img/Juve.jpg" alt= "Juventus F.C."/>';
@@ -37,6 +49,13 @@ var image02 = '<img src="img/premier.jpg" alt= "Premier League"/>';
   
   document.write(image02);
   var team2 = prompt('Please select your champions(Manchester City F.C. , Manchester United F.C. , Liverpool F.C.)')
+
+  while (team2 !== 'Manchester City F.C.' && team2 !== 'Manchester United F.C.' && team2 !== 'Liverpool F.C.') {
+
+  alert('You are enter a wrong champions');
+  team2 = prompt('Please select your champions(Manchester City F.C. , Manchester United F.C. , Liverpool F.C.)')
+
+  }
 if(team2 =='Manchester City F.C.')
 {
   var image4 = '<img src="img/mancity.png" alt= "Manchester City F.C."/>';
@@ -61,6 +80,13 @@ var image03 = '<img src="img/laliga.jpg" alt= "LaLiga"/>';
   
   document.write(image03);
   var team3 = prompt('Please select your champions(Atlético Madrid , Real Madrid C.F. , FC Barcelona)')
+
+  while (team3 !== 'Atlético Madrid' && team3 !== 'Real Madrid C.F.' && team3 !== 'FC Barcelona') {
+
+  alert('You are enter a wrong champions');
+  team3 = prompt('Please select your champions(Atlético Madrid , Real Madrid C.F. , FC Barcelona)')
+
+  }
 if(team3 =='Atlético Madrid')
 {
   var image7 = '<img src="img/Atletico.png" alt= "Atlético Madrid"/>';
@@ -85,6 +111,14 @@ var image04 = '<img src="img/bundes.jpg" alt= "Bundesliga"/>';
   
   document.write(image04);
   var team4 = prompt('Please select your champions(FC Bayern Munich , Borussia Dortmund , Wolfsburg)')
+
+  while (team4 !== 'FC Bayern Munich' && team4 !== 'Borussia Dortmund' && team4 !== 'Wolfsburg') {
+
+  alert('You are enter a wrong champions');
+  team4 = prompt('Please select your champions(FC Bayern Munich , Borussia Dortmund , Wolfsburg)')
+
+  }
+
 if(team4 =='FC Bayern Munich')
 {
   var image10 = '<img src="img/bayern.jpg" alt= "FC Bayern Munich"/>';
@@ -104,4 +138,10 @@ if(team4 =='FC Bayern Munich')
   document.write(image12);
 }
 }
+var goalNumbers = prompt('How many time do you want them to score a goal?');
+for (var i = 1; i <= goalNumbers; i++) {
 
+    var goal = '<img src="img/Ball-In-Goal.jpg" alt= "goalNumbers"/>';
+    document.write(goal);
+
+}
